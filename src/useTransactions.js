@@ -9,6 +9,7 @@ const useTransactions = (title) => {
   const rightTransactions = transactions.filter((t) => t.type === title);
   const total = rightTransactions.reduce((acc, currVal) => acc += currVal.amount, 0);
   const categories = title === 'Income' ? incomeCategories : expenseCategories;
+  console.log({rightTransactions, total, categories})
 
   rightTransactions.forEach((t) => {
     const category = categories.find((c) => c.type === t.category);
@@ -25,7 +26,9 @@ const useTransactions = (title) => {
     }],
     labels: filteredCategories.map((c) => c.type),
   };
-
+//   if (total == NaN){
+//       return 0;
+//   }
   return { filteredCategories, total, chartData };
 };
 
