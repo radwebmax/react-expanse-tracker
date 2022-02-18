@@ -75,7 +75,7 @@ const NewTransactionForm = () => {
         createTransaction();
       }
     }
-  }, [segment]);
+  }, [segment, createTransaction, formData]);
 
   const selectedCategories = formData.type === 'Income' ? incomeCategories : expenseCategories;
 
