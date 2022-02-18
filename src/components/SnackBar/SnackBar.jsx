@@ -3,7 +3,7 @@ import { Snackbar } from "@material-ui/core";
 import MuiAlert from "@material-ui/lab/Alert";
 
 import useStyles from './styles';
-
+ 
 
 const CustomizedSnackBar = ({open, setOpen}) => {
     const classes = useStyles();
