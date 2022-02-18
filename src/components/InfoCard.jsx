@@ -8,7 +8,7 @@ const InfoCard = () => {
        Try saying: <br/>
        Add {isIncome ? 'Income ' : 'Expense '} 
        in Category {isIncome ? 'Business ' : 'House '} 
-       on {isIncome ? 'Monday ' : 'tomrrow '} 
+       on {isIncome ? 'Monday ' : 'tomorrow '} 
        for {isIncome ? '$1000 ' : '$204 '} 
     </div>
   )

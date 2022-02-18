@@ -23,12 +23,12 @@ const App = () => {
                 <Grid item xs={12} sm={3} className={classes.mobile}>
                     <Details title="Income"/>
                 </Grid>
-                <Grid ref={main} item xs={12} sm={3} className={classes.main}>
+                <Grid ref={main} item xs={12} sm={3} className={classes.main} style={{margin:'16px'}}>
                     <Main />
+                </Grid>
                 <Grid item xs={12} sm={3} className={classes.desktop}>
-                    <Details title="Income"/>
-                </Grid>
-                </Grid>
+                        <Details title="Income"/>
+                    </Grid>
                 <Grid item xs={12} sm={3} className={classes.last}>
                     <Details title="Expense"/>
                 </Grid>

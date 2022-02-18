@@ -12,8 +12,8 @@ export default makeStyles((theme) => ({
     },
   },
   main: {
-    [theme.breakpoints.up('sm')]: {
-      paddingBottom: '5%',
+    [theme.breakpoints.up('xs')]: {
+      marginBottom:'64px'
     },
   },
   last: {
