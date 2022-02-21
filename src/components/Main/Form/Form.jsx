@@ -7,6 +7,7 @@ import Snackbar from '../../Snackbar/Snackbar';
 import formatDate from '../../../utils/formatDate';
 import { ExpenseTrackerContext } from '../../../context/context';
 import { incomeCategories, expenseCategories } from '../../../constants/categories';
+import { useSpeechSynthesis } from "react-speech-kit";
 import useStyles from './styles';
 
 const initialState = {
@@ -22,14 +23,17 @@ const NewTransactionForm = () => {
   const [formData, setFormData] = useState(initialState);
   const { segment } = useSpeechContext();
   const [open, setOpen] = React.useState(false);
+  const { speak } = useSpeechSynthesis();
 
   const createTransaction = () => {
     if (Number.isNaN(Number(formData.amount)) || !formData.date.includes('-')) return;
 
     if (incomeCategories.map((iC) => iC.type).includes(formData.category)) {
       setFormData({ ...formData, type: 'Income' });
+      speak({ text: `Total income now is ${document.querySelector('.makeStyles-income-6 h5').textContent}` })
     } else if (expenseCategories.map((iC) => iC.type).includes(formData.category)) {
       setFormData({ ...formData, type: 'Expense' });
+      speak({ text: `Total expense now is ${document.querySelector('.makeStyles-expense-7 h5').textContent}` })
     }
 
     setOpen(true);

@@ -39,3 +39,6 @@ h1{
     margin-top: 35px;
     color: #e57c58;
 }
+.speak-trigger{
+    cursor: pointer;
+}
